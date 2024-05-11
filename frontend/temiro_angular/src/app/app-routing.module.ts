@@ -13,21 +13,22 @@ import { QuienesSomosComponent }     from './home/quienes-somos/quienes-somos.co
 import { RegistroComponent }         from './home/registro/registro.component';
 import { TermCondicionesComponent }  from './home/term-condic/term-condic.component';
 
-import { CarrocomprasComponent }     from './dashboard/carrocompras/carrocompras.component';
-import { IndiceComponent }           from './dashboard/indice/indice.component';
-import { MisComprasComponent }       from './dashboard/mis-compras/mis-compras.component';
-import { PerfilComponent }           from './dashboard/perfil/perfil.component';
-import { ProductosComponent }        from './dashboard/productos/productos.component';
-import { ProductoComponent }         from './dashboard/productos/producto/producto.component';
-import { DetallesComponent }         from './dashboard/productos/detalles/detalles.component';
-import { ComprarComponent }          from './dashboard/productos/comprar/comprar.component';
-import { ServiciosComponent }        from './dashboard/servicios/servicios.component';
-import { FormularioConsultaComponent } from './dashboard/servicios/FormuConsultas/formulario-consulta.component';
+import { CarrocomprasComponent }     from './dashboard/pages/carrocompras/carrocompras.component';
+import { IndiceComponent }           from './dashboard/pages/indice/indice.component';
+import { MisComprasComponent }       from './dashboard/pages/mis-compras/mis-compras.component';
+import { PerfilComponent }           from './dashboard/pages/perfil/perfil.component';
+import { ProductosComponent }        from './dashboard/pages/productos/productos.component';
+import { ProductoComponent }         from './dashboard/pages/productos/producto/producto.component';
+import { DetallesComponent }         from './dashboard/pages/productos/detalles/detalles.component';
+import { ComprarComponent }          from './dashboard/pages/productos/comprar/comprar.component';
+import { ServiciosComponent }        from './dashboard/pages/servicios/servicios.component';
+import { FormularioConsultaComponent } from './dashboard/pages/servicios/FormuConsultas/formulario-consulta.component';
 
 import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-clientes.component';
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
 import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
 import { ListaVentasComponent }      from './dashboardadmin/lista-ventas/lista-ventas.component';
+import { PagesComponent } from './dashboard/pages/pages.component';
 
 
 const routes: Routes = [
@@ -41,14 +42,16 @@ const routes: Routes = [
   {path: 'registro', component: RegistroComponent},
   {path: 'termycond', component: TermCondicionesComponent},
 
-  {path: 'carrito', component: CarrocomprasComponent},
-  {path: 'indice', component: IndiceComponent},
-  {path: 'productos', component: ProductosComponent},
-  {path: 'perfil', component: PerfilComponent},
-  {path: 'detalle/:idproducto', component: DetallesComponent},
-  {path: 'comprar/:precio', component: ComprarComponent},
-  {path: 'servicios', component: ServiciosComponent},
-  {path: 'formulario-consulta', component: FormularioConsultaComponent },
+  { path: 'pages', component: PagesComponent, children: [
+    { path: 'carrito', component: CarrocomprasComponent },
+    { path: 'indice', component: IndiceComponent },
+    { path: 'productos', component: ProductosComponent },
+    { path: 'perfil', component: PerfilComponent },
+    { path: 'detalle/:idproducto', component: DetallesComponent },
+    { path: 'comprar/:precio', component: ComprarComponent },
+    { path: 'servicios', component: ServiciosComponent },
+    { path: 'formulario-consulta', component: FormularioConsultaComponent }
+  ]},
 
   {path: 'abmclientes', component: AbmClientesComponent},
   {path: 'formuproductos', component: FormuProductosComponent},

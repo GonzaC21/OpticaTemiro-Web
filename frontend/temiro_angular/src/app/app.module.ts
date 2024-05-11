@@ -9,6 +9,7 @@ import { ComunModule }               from './comun/comun.module';
 import { DashboardModule }           from './dashboard/dashboard.module';
 import { DashboardAdminModule }      from './dashboardadmin/dashboardadmin.module';
 import { HomeModule }                from './home/home.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -26,7 +27,8 @@ import { HomeModule }                from './home/home.module';
     ComunModule,
     DashboardModule,
     HomeModule,
-    DashboardAdminModule
+    DashboardAdminModule,
+    RouterModule
   ],
   providers: [
   ],

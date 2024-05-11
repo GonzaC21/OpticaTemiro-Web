@@ -8,6 +8,8 @@
   box-sizing: border-box;
 }
 
+
+
 ul {
   list-style: none;
 }
@@ -15,7 +17,6 @@ ul {
 .sidebar {
   top: 0;
   bottom: 0;
-  height: 90vh;
   left: 0;
   background-color: white;
   width: 90px;
