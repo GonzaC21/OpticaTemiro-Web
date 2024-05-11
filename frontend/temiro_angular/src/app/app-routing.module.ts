@@ -12,6 +12,7 @@ import { LoginComponent }            from './home/login/login.component';
 import { QuienesSomosComponent }     from './home/quienes-somos/quienes-somos.component';
 import { RegistroComponent }         from './home/registro/registro.component';
 import { TermCondicionesComponent }  from './home/term-condic/term-condic.component';
+import { VinculoAppComponent}        from './home/vinculo-app/vinculo-app.component';
 
 import { CarrocomprasComponent }     from './dashboard/pages/carrocompras/carrocompras.component';
 import { IndiceComponent }           from './dashboard/pages/indice/indice.component';
@@ -28,7 +29,7 @@ import { AbmClientesComponent }      from './dashboardadmin/abm-clientes/abm-cli
 import { FormuProductosComponent }   from './dashboardadmin/formu-productos/formu-productos.component';
 import { IndiceAdmComponent }        from './dashboardadmin/indice-adm/indice-adm.component';
 import { ListaVentasComponent }      from './dashboardadmin/lista-ventas/lista-ventas.component';
-import { PagesComponent } from './dashboard/pages/pages.component';
+import { PagesComponent }            from './dashboard/pages/pages.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path: 'quienes-somos', component: QuienesSomosComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'termycond', component: TermCondicionesComponent},
+  {path: 'vinculo-app', component: VinculoAppComponent},
 
   { path: 'pages', component: PagesComponent, children: [
     { path: 'carrito', component: CarrocomprasComponent },

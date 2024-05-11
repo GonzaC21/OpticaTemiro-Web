@@ -12,6 +12,7 @@ import { TermCondicionesComponent } from './term-condic/term-condic.component';
 import { FaqComponent }             from './faq/faq.component';
 import { LoginComponent }           from './login/login.component';
 import { RegistroComponent }        from './registro/registro.component';
+import { VinculoAppComponent}       from './vinculo-app/vinculo-app.component';
 
 
 
@@ -22,7 +23,8 @@ import { RegistroComponent }        from './registro/registro.component';
     TermCondicionesComponent,
     FaqComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    VinculoAppComponent
   ],
   imports: [
     CommonModule,
