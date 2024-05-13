@@ -1,0 +1,57 @@
+<div class="container">
+      <header>
+        <div class="googleplaylogo">
+        <img src="./assets/img/google_play_logo.png" alt="Logo Google Play" class="google-logo">
+        </div>
+
+      </header>
+      <main>
+          <div class="app">
+              <img src="./assets/img/icono-app.jpg" alt="Icono de App">
+              <div class="app-detalle">
+                  <h2><b>TeMiro App</b></h2>
+                  <p>Una aplicación pensada para la salud visual de las personas.
+                  <br>En ella podrás hacer ejercicios y pruebas de visión,
+                  <br>consultar a un profesional, agendar turnos de atención y realizar compras online.</p>
+                  
+                  <p class="actualizacion"><b>Última actualización 13 Mayo 2024</b></p>
+                  
+                  <a href="./assets/archivo/TeMiroApp-0.2.0-debug.apk" download>
+                  <button><b>Descargar</b></button>
+                 </a>
+              </div>
+          </div>
+        
+            <p class="opiniones-titulo"><b>Clasificaciones y opiniones</b></p>
+        
+          <div class="clasificacionesgrafico">
+            <img src="./assets/img/calificaciones-play.png" alt="Gráfico de Calificaciones" class="calificiones">
+        </div>
+        
+        <p class="nombre-usuario-uno"><b>Mateo Torres</b></p>
+        <p class="argumento-usuario">Excelente aplicación para saber cómo andamos de la vista, ya que las pruebas son muy simples de hacer y los exámenes están geniales.</p>
+        <p class="nombre-usuario-dos"><b>Florencia Luna</b></p>
+        <p class="argumento-usuario">Una aplicación súper útil. Me parece buena manera de ir controlando la perdida o recuperación de nuestra visión. Además, es un contacto previo a la visita presencial al local de la óptica.</p>
+
+      </main>
+          
+      <div class="carrusel-container">
+        <div class="carrusel-slide" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
+          <img src="./assets/img/pantalla-inicio.png" alt="Image 1">
+          <img src="./assets/img/pantalla-menu.png" alt="Image 2">
+          <img src="./assets/img/pantalla-serv-roturas.png" alt="Image 3">
+          <img src="./assets/img/pantalla-serv-oftalmo.png" alt="Image 4">
+          <img src="./assets/img/pantalla-contacto.png" alt="Image 5">
+          <img src="./assets/img/pantalla-prueba-uno.png" alt="Image 6">
+          <img src="./assets/img/pantalla-productos.png" alt="Image 7">
+          <img src="./assets/img/pantalla-datosdepago.png" alt="Image 8">     
+          <img src="./assets/img/pantalla-iralaweb.png" alt="Image 9">
+        </div>
+        <button (click)="prevSlide()" class="prev-btn">&#10094;</button>
+        <button (click)="nextSlide()" class="next-btn">&#10095;</button>
+      </div>
+
+      <footer>
+        <p>&copy; 2024 Google Play Store</p>
+      </footer>
+  </div>
