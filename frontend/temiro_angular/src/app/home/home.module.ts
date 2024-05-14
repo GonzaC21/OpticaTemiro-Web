@@ -31,6 +31,10 @@ import { VinculoAppComponent}       from './vinculo-app/vinculo-app.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule
+  ],
+  exports:[
+    RouterModule,
+    
   ]
 })
 export class HomeModule {

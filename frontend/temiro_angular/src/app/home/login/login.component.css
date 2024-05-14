@@ -13,7 +13,7 @@
 }
 
 .cont {
-  height: 700px;
+  height: 100vh;
 }
 
 .form-box {
@@ -101,4 +101,3 @@ p {
 .error-message {
     color: red;
   }
-  

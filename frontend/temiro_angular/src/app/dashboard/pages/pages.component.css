@@ -15,5 +15,15 @@
 .main-content{
   margin-left: 300px;
   align-items: center;
-  --overflow: hidden 
+  overflow-y: auto; /* Asegura que el scroll solo aparezca cuando sea necesario */
+  max-height: calc(100vh - 100px); /* Establece la altura máxima del área de scroll */
+
+    /* Oculta el scroll en (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+
+    /* Oculta el scroll en Firefox */
+    scrollbar-width: none;
 }
