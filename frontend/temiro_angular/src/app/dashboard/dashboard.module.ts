@@ -15,6 +15,8 @@ import { DetallesComponent }      from './pages/productos/detalles/detalles.comp
 import { FormularioConsultaComponent } from './pages/servicios/FormuConsultas/formulario-consulta.component';
 import { PagesComponent } from './pages/pages.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { ContactoComponent } from '../home/contacto/contacto.component';
+import { HomeModule } from '../home/home.module';
 
 
 const routes: Routes =[
@@ -23,14 +25,18 @@ const routes: Routes =[
     children: [
       {path: 'carrito', component: CarrocomprasComponent},
       {path: 'indice', component: IndiceComponent},
+      {path: 'miscompras', component: MisComprasComponent},
       {path: 'productos', component: ProductosComponent},
       {path: 'perfil', component: PerfilComponent},
       {path: 'detalle/:idproducto', component: DetallesComponent},
       {path: 'comprar/:precio', component: ComprarComponent},
       {path: 'servicios', component: ServiciosComponent},
       {path: 'formulario-consulta', component: FormularioConsultaComponent },
+      {path: 'contacto', component: ContactoComponent},
     ]
-  }
+  },
+  
+  
 ]
 
 @NgModule({
@@ -51,7 +57,8 @@ const routes: Routes =[
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes), 
+    HomeModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -19,7 +19,8 @@ ul {
   bottom: 0;
   left: 0;
   background-color: white;
-  width: 90px;
+  width: 300px;
+  height: 100vh;
   overflow: hidden;
   transition: width 0.2s linear;
   box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
@@ -91,11 +92,11 @@ a:hover {
   color: blue;
 }
 
-.sidebar:hover {
+/*.sidebar:hover {
   width: 280px;
   transition: all 0.5s ease;
 }
-
+*/
 .salir {
   bottom: 0;
 }

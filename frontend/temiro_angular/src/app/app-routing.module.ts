@@ -47,13 +47,25 @@ const routes: Routes = [
   { path: 'pages', component: PagesComponent, children: [
     { path: 'carrito', component: CarrocomprasComponent },
     { path: 'indice', component: IndiceComponent },
+    { path: 'miscompras', component: MisComprasComponent},
     { path: 'productos', component: ProductosComponent },
     { path: 'perfil', component: PerfilComponent },
     { path: 'detalle/:idproducto', component: DetallesComponent },
     { path: 'comprar/:precio', component: ComprarComponent },
     { path: 'servicios', component: ServiciosComponent },
-    { path: 'formulario-consulta', component: FormularioConsultaComponent }
+    { path: 'formulario-consulta', component: FormularioConsultaComponent },
+    {path: 'contacto', component: ContactoComponent},
   ]},
+
+  { path: 'carrito', component: CarrocomprasComponent },
+  { path: 'productos', component: ProductosComponent },
+  { path: 'detalle/:idproducto', component: DetallesComponent },
+  { path: 'comprar/:precio', component: ComprarComponent },
+  { path: 'servicios', component: ServiciosComponent },
+  { path: 'formulario-consulta', component: FormularioConsultaComponent },
+  { path: 'detalle/:idproducto', component: DetallesComponent },
+  { path: 'comprar/:precio', component: ComprarComponent },
+
 
   {path: 'abmclientes', component: AbmClientesComponent},
   {path: 'formuproductos', component: FormuProductosComponent},
