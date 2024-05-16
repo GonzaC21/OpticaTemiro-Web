@@ -1,0 +1,35 @@
+
+.history-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.purchase {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+/* Estilos para la cabecera de compra */
+.purchase-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.date, .total {
+  font-weight: bold;
+}
+
+/* Estilos para la lista de items */
+.items-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.items-list li {
+  margin-bottom: 5px;
+}

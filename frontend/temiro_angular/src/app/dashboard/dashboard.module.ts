@@ -1,20 +1,43 @@
-import { NgModule }            from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule }            from '@angular/core';
 import { CommonModule }        from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
-import { RouterModule }        from '@angular/router';
+import { RouterModule, Routes }        from '@angular/router';
 
-import { CarrocomprasComponent }  from './carrocompras/carrocompras.component';
-import { MisComprasComponent }    from './mis-compras/mis-compras.component';
-import { IndiceComponent }        from './indice/indice.component';
-import { ProductoComponent }      from './productos/producto/producto.component';
-import { ComprarComponent }       from './productos/comprar/comprar.component';
-import { PerfilComponent }        from './perfil/perfil.component';
-import { ProductosComponent }     from './productos/productos.component';
-import { DetallesComponent }      from './productos/detalles/detalles.component';
-import { FormularioConsultaComponent } from './servicios/FormuConsultas/formulario-consulta.component';
+import { CarrocomprasComponent }  from './pages/carrocompras/carrocompras.component';
+import { MisComprasComponent }    from './pages/mis-compras/mis-compras.component';
+import { IndiceComponent }        from './pages/indice/indice.component';
+import { ProductoComponent }      from './pages/productos/producto/producto.component';
+import { ComprarComponent }       from './pages/productos/comprar/comprar.component';
+import { PerfilComponent }        from './pages/perfil/perfil.component';
+import { ProductosComponent }     from './pages/productos/productos.component';
+import { DetallesComponent }      from './pages/productos/detalles/detalles.component';
+import { FormularioConsultaComponent } from './pages/servicios/FormuConsultas/formulario-consulta.component';
+import { PagesComponent } from './pages/pages.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { ContactoComponent } from '../home/contacto/contacto.component';
+import { HomeModule } from '../home/home.module';
 
 
+const routes: Routes =[
+  {
+    path: 'pages', component: PagesComponent,
+    children: [
+      {path: 'carrito', component: CarrocomprasComponent},
+      {path: 'indice', component: IndiceComponent},
+      {path: 'miscompras', component: MisComprasComponent},
+      {path: 'productos', component: ProductosComponent},
+      {path: 'perfil', component: PerfilComponent},
+      {path: 'detalle/:idproducto', component: DetallesComponent},
+      {path: 'comprar/:precio', component: ComprarComponent},
+      {path: 'servicios', component: ServiciosComponent},
+      {path: 'formulario-consulta', component: FormularioConsultaComponent },
+      {path: 'contacto', component: ContactoComponent},
+    ]
+  },
+  
+  
+]
 
 @NgModule({
   declarations: [
@@ -26,14 +49,18 @@ import { FormularioConsultaComponent } from './servicios/FormuConsultas/formular
     MisComprasComponent,
     ComprarComponent,
     PerfilComponent,
-    FormularioConsultaComponent
+    FormularioConsultaComponent,
+    PagesComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    RouterModule.forChild(routes), 
+    HomeModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class DashboardModule {
 

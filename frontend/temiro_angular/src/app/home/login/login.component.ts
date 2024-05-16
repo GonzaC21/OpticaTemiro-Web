@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
                 if (usr == "admin") {
                     this.router.navigate(["indiceadm"]);
                 } else {
-                    this.router.navigate(["indice"]);
+                    this.router.navigate(["pages"]);
                 }
             }, err=> {
                 alert("Algo salió mal en el ingreso !")

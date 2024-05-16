@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationService } from './navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  constructor(public navigationService: NavigationService) {
+    this.navigationService.showLinks = true;
+  }
 }
