@@ -28,7 +28,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
         model = Usuario
         fields = ('idusuario', 'tipousuario', 'usuario', 'password',
                   'email', 'aceptatc')
-        
+
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
@@ -47,7 +47,7 @@ class ProductoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Producto
         fields = ('idproducto', 'descripcion', 'idtipoproducto', 'preciocosto',
-                  'precio', 'fechaingreso')
+                  'precio', 'fechaingreso', 'detalle', 'especificaciones', 'imagen')
 
 class StockSerializer(serializers.ModelSerializer):
     class Meta:
