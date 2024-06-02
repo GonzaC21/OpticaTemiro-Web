@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     onFocus(): void {
         this.showPasswordRequiredMessage = true;
         this.showUserRequiredMessage = true;
-      }
+    }
 
     public ingresar(event: Event) {
         event.preventDefault;
@@ -51,9 +51,11 @@ export class LoginComponent implements OnInit {
                 this.formLogin.clearValidators();
                 this.formLogin.clearAsyncValidators();
                 let usr = this.formLogin.get("usuario")?.value;
+                localStorage.setItem('usuario', JSON.stringify(usr));
                 // console.log("usuario = "+usr);
                 if (usr == "admin") {
                     this.router.navigate(["indiceadm"]);
+                    localStorage.setItem('admin', JSON.stringify(usr));
                 } else {
                     this.router.navigate(["pages"]);
                 }
@@ -66,3 +68,4 @@ export class LoginComponent implements OnInit {
         }
     }
 }
+
