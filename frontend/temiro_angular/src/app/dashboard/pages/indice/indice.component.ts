@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-indice',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class IndiceComponent {
 
+  router = inject(Router);
+
+  onClickSalir(){
+    localStorage.removeItem('usuario');
+    this.router.navigate(['/login']);
+  }
+
+
 }
+
+
+
+
