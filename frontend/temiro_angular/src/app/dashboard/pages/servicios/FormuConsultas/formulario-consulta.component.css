@@ -1,34 +1,72 @@
-/* Estilos opcionales para el formulario de consulta */
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    height: 80vh;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .form-group {
-    margin-bottom: 15px;
-  }
+.container {
+  background: #ffffff;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  color: rgb(5, 3, 3);
+  box-shadow: 7px 13px 37px #000000;
+  align-content: center;
+}
 
-  label {
-    font-weight: bold;
-  }
+.mainConsulta {
+  width: 40rem;
+    margin: 10 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
+h2 {
+ text-align: center;
+ font-size: 22px;
+}
 
-  button[type="submit"] {
-    padding: 10px 20px;
-    margin-left: 15rem;
-  }
+.form-group {
+  width: 90%;
+  margin: 20px auto;
+  padding-left: 0; 
+  padding-right: 0;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    margin: 5px 10px 5px 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px 25px;
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  padding: 10px 40px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
