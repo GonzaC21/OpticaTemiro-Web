@@ -1,19 +1,15 @@
-
 * {
     margin: 0;
     padding: 0;
-    margin-bottom: 6px;
     box-sizing: border-box;
 }
 
 .titulo {
     text-align: center;
     font-size: 22px;
-    margin-bottom: 20px;
 }
 
 .bodyContacto {
-    width: min(30rem , 100%);
     background: #ffffff;
     padding: 30px;
     margin: auto;
@@ -23,7 +19,7 @@
     font-family: 'Roboto';
     color: rgb(5, 3, 3);
     box-shadow: 7px 13px 37px #000000;
-
+    align-content: center;
 }
 
 .mainContacto {
@@ -31,18 +27,28 @@
     margin: 10 auto;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
-
 
 .formContacto {
-  width: 90%;
-  margin: 40px 0;
+    width: 90%;
+    margin: 20px auto;
+    padding-left: 0; 
+    padding-right: 0;
 }
 
-form label, form legend {
+form label {
     display: block;
     font-size: 20px;
-    margin: 0 0 10px;
+    margin: 5px 10px 5px 10px;
+}
+
+.form legend {
+    display: block;
+    font-size: 20px;
+    margin: 5px 10px;
 }
 
 .input-padron {
@@ -61,7 +67,7 @@ form label, form legend {
 }
 
 .tableContacto {
-    margin: 30px 30px;
+    margin: 30px auto;
 }
 
 thead {
@@ -73,4 +79,20 @@ thead {
 td,th {
     border: 1px solid #000000;
     padding: 4px 10px;
+}
+
+.legend-separator {
+    margin-bottom: 10px;
+}
+
+.select-separator {
+    margin-top: 10px;
+    height: 40px;
+    width: 380px; 
+    font-size: 20px;
+    text-align: center;
+}
+
+button {
+    height: 40px;
 }

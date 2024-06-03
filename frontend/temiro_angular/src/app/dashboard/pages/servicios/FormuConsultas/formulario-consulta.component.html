@@ -1,29 +1,34 @@
-<div class="container mt-4">
-  <h2>Formulario de Consulta</h2>
+<br>
+<br>
+<div class="container mt-4 mainConsulta">
+  
+  <h2>FORMULARIO DE CONSULTA</h2>
   <form [formGroup]="formularioConsulta" (ngSubmit)="enviarConsulta()">
+
     <div class="form-group">
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" class="form-control" formControlName="apellido" required>
+      <label for="nombreapellido">Nombre y Apellido</label>
+      <input type="text" id="nombreapellido" class="form-control" formControlName="nombreapellido" required>
     </div>
+
     <div class="form-group">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" class="form-control" formControlName="nombre" required>
+      <label for="correoelectronico">Correo Electrónico</label>
+      <input type="email" id="email" class="form-control" formControlName="email" required placeholder="email@dominio.com">
     </div>
+
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" class="form-control" formControlName="email" required>
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" class="form-control" formControlName="telefono" required placeholder="(XX) XXXX XXXX">
     </div>
+
     <div class="form-group">
-      <label for="telefono">Teléfono:</label>
-      <input type="tel" id="telefono" class="form-control" formControlName="telefono" required>
-    </div>
-    <div class="form-group">
-      <label for="consulta">Consulta:</label>
+      <label for="consulta">Consulta</label>
       <textarea id="consulta" class="form-control" formControlName="consulta" required></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary w-100">ENVIAR</button>
+    </div>
+
   </form>
 </div>
-<div>
-  <br>
-</div>
+<br>
