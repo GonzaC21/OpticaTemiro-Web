@@ -9,8 +9,10 @@
   <ul>
       <li>
       <a href="pages/perfil" class="foto_perfil" >
-          <img src="./assets/img/fotoperfil.jpg">
+        <!--<img src="./assets/img/fotoperfil.jpg">-->
+
           <span class="bienv">Bienvenido</span>
+          <span id="nombreUsuario"></span>
       </a>
       </li>
       <li><a routerLink="/pages/productos" [routerLinkActive]="'active'">
@@ -45,7 +47,7 @@
       </a></li>-->
       <li><a class="salir" routerLink="/login" [routerLinkActive]="'active'">
         <i class="bi bi-box-arrow-left"></i>
-        <span class="menu_item">Salir</span>
+        <span (click)="onClickSalir()" class="menu_item">Salir</span>
         </a></li>
   </ul>
 </div>

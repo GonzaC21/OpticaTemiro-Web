@@ -116,11 +116,14 @@ class TipoProducto(models.Model):
 
 class Producto(models.Model):
     idproducto = models.IntegerField(db_column='idProducto', primary_key=True)
-    descripcion = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=64)
     idtipoproducto = models.ForeignKey('TipoProducto', models.DO_NOTHING, db_column='idTipoProducto')
     preciocosto = models.IntegerField(db_column='precioCosto')
     precio = models.IntegerField()
     fechaingreso = models.DateField(db_column='fechaIngreso')
+    detalle = models.CharField(max_length=1024)
+    especificaciones = models.CharField(max_length=256)
+    imagen = models.ImageField(null=True, blank=True, upload_to="images/")
 
     def borrar(self, prd):
         queryset = Producto.objects.all()

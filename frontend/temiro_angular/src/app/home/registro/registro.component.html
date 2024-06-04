@@ -1,41 +1,51 @@
 <div class="form-register">
-
   <h4>REGISTRARSE</h4>
 
   <form [formGroup]="formRegistro" (ngSubmit)="registrarse($event)" novalidate>
 
     <!-- Nombre y Apellido -->
-    <div class="form-group was-validated">
+    <div class="form-group" [ngClass]="{'was-validated': Fullname?.touched || Fullname?.dirty}">
       <input type="text" class="form-control" placeholder="NOMBRE Y APELLIDO" id="fullname" formControlName="fullname" required minlength="5" maxlength="30">
-      <span *ngIf="Fullname?.errors?.['required']">* Requerido</span>
-      <div class="invalid-feedback">Por favor, ingresa tu Nombre y Apellido...</div>
+      <div *ngIf="Fullname?.errors && (Fullname?.touched || Fullname?.dirty)" class="error-message">
+        <span *ngIf="Fullname?.errors?.['required']">Se requiere de Nombre y Apellido</span>
+        <div class="invalid-feedback">Por favor, ingresa tu Nombre y Apellido...</div>
+      </div>
     </div>
 
     <!-- Usuario -->
-    <div class="form-group was-validated">
+    <div class="form-group" [ngClass]="{'was-validated': Username?.touched || Username?.dirty}">
       <input type="text" class="form-control" placeholder="USUARIO" id="username" formControlName="username" required minlength="5" maxlength="15">
-      <span *ngIf="Username?.errors?.['required']">* Requerido</span>
-      <div class="invalid-feedback">Por favor, ingresa tu Usuario...</div>
+      <div *ngIf="Username?.errors && (Username?.touched || Username?.dirty)" class="error-message">
+        <span *ngIf="Username?.errors?.['required']">Se requiere de un Usuario</span>
+        <div class="invalid-feedback">Por favor, ingresa tu Usuario...</div>
+      </div>
     </div>
 
     <!-- Email -->
-    <div class="form-group was-validated">
+    <div class="form-group" [ngClass]="{'was-validated': Email?.touched || Email?.dirty}">
       <input type="email" class="form-control" placeholder="CORREO ELECTRÓNICO" id="email" formControlName="email" required minlength="8" maxlength="40">
-      <span *ngIf="Email?.errors?.['required']">* Requerido</span>
-      <div class="invalid-feedback">Por favor, ingresa tu Correo Electrónico (Email inválido)...</div>
+      <div *ngIf="Email?.errors && (Email?.touched || Email?.dirty)" class="error-message">
+        <span *ngIf="Email?.errors?.['required']">Se requiere de un Email</span>
+        <span *ngIf="Email?.errors?.['email']">Email inválido</span>
+        <div class="invalid-feedback">Por favor, ingresa tu Correo Electrónico...</div>
+      </div>
     </div>
 
     <!-- Contraseña -->
-    <div class="form-group was-validated">
+    <div class="form-group" [ngClass]="{'was-validated': Password?.touched || Password?.dirty}">
       <input type="password" class="form-control" placeholder="CONTRASEÑA" id="password" formControlName="password" required minlength="5" maxlength="30">
-      <span *ngIf="Password?.errors?.['required']">* Requerido</span>
-      <div class="invalid-feedback">Por favor, ingresa tu Contraseña...</div>
+      <div *ngIf="Password?.errors && (Password?.touched || Password?.dirty)" class="error-message">
+        <span *ngIf="Password?.errors?.['required']">Requeriere de una Contraseña</span>
+        <span *ngIf="Password?.errors?.['minlength']">Debe tener como mínimo 5 caracteres</span>
+        <span *ngIf="Password?.errors?.['maxlength']">Debe tener como máximo 10 caracteres</span>
+        <div class="invalid-feedback">Por favor, ingresa tu Contraseña...</div>
+      </div>
     </div>
 
     <!-- ¿Acepta Terminos y Condiciones? -->
     <p>
-      <input type="checkbox" name="Aceptar" id="checkbox" formControlName="checkbox"> Acepto los
-      <a class="enlaces-negros" href="termycond" required>TERMINOS Y CONDICIONES</a>
+      <input type="checkbox" name="Aceptar" id="checkbox" formControlName="checkbox" required> Acepto los
+      <a class="enlaces-negros" href="termycond">TERMINOS Y CONDICIONES</a>
     </p>
 
     <!-- Botón Final -->

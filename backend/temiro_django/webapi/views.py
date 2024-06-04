@@ -90,7 +90,7 @@ class UsuarioRegistro(generics.CreateAPIView):
 
 class ClienteList(generics.ListCreateAPIView):
     permission_classes = [AllowAny]
-    search_fields = ['apellido', 'nombre', 'dni']
+    search_fields = ['idusuario__idusuario', 'apellido', 'nombre', 'dni']
     filter_backends = (filters.SearchFilter,)
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
@@ -225,6 +225,8 @@ class FacturaDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class VentaList(generics.ListCreateAPIView):
     permission_classes = [AllowAny]
+    search_fields = ['idcliente__idcliente']
+    filter_backends = (filters.SearchFilter,)
     queryset = Venta.objects.all()
     serializer_class = VentaSerializer
 
@@ -235,6 +237,8 @@ class VentaDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class DetalleVentaList(generics.ListCreateAPIView):
     permission_classes = [AllowAny]
+    search_fields = ['idventa__idventa']
+    filter_backends = (filters.SearchFilter,)
     queryset = DetalleVenta.objects.all()
     serializer_class = DetalleVentaSerializer
 

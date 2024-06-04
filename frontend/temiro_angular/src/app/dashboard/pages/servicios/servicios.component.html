@@ -2,63 +2,65 @@
   <div class="container">
     <div class="row">
       <div class="col text-center text-uppercase p-3">
-                                  <!-- Interpolacion -->
-        <h2 style="color:black " class="texto-blanco titulo">{{titulo}}</h2> 
+        <h2 style="color:black" class="texto-blanco titulo">SERVICIOS</h2> 
       </div>
     </div>
     <div class="row">
+      <!-- Tarjeta 1 -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card">
-                                      <!-- Interpolacion -->
-          <img class="card-img-top" src="{{ examenvisual }}" alt="Foto examenvisual">
-          <div class="card-body">
+        <div class="card h-100">
+          <img class="card-img-top" src="./assets/img/examenvisual.jpg" alt="Foto examenvisual">
+          <div class="card-body d-flex flex-column">
             <div class="badges">
               <span class="badge badge-warning"></span>
-            </div>                                  <!-- (Event) Binding -->
-            <button class="btn btn-primary" (click)="redirigirAFormularioConsulta()">
-              <h5 class="card-title seccion-texto">Examen Visual</h5>
-            </button>
-            <p class="card-text seccion-texto"><br>Los exámenes visuales o graduación de la vista y todo lo que tiene que ver con la optometría forman el núcleo de nuestra filosofía de
-               empresa,Durante el examen se realizarán TODAS las pruebas necesarias para conseguir un diagnóstico preciso del defecto visual.De esta forma, encontraremos la mejor
+            </div>
+            <h5 class="card-title seccion-texto"><b>EXAMEN VISUAL</b></h5>
+            <p class="card-text seccion-texto">Los exámenes visuales o graduación de la vista y todo lo que tiene que ver con la optometría forman el núcleo de nuestra filosofía de
+               empresa, Durante el examen se realizarán TODAS las pruebas necesarias para conseguir un diagnóstico preciso del defecto visual. De esta forma, encontraremos la mejor
                 solución a los problemas que refiere el paciente.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card">
-                                    <!-- Property Binding -->
-          <img class="card-img-top" [src]="tallerdemontaje" alt="Foto anteojos Recetados">
-          <div class="card-body">
-            <div class="badges">               <!-- Property Binding -->
-            <span class="badge badge-warning"><div inerhtml="textotaller"></div></span>
+            <div class="mt-auto">
+              <button class="btn btn-primary w-100" (click)="redirigirAFormularioConsulta()"><b>CONSULTAR</b></button>
             </div>
-                    <!-- Property Binding -->                            <!-- (Event) Binding -->
-                    <button class="btn btn-primary" (click)="redirigirAFormularioConsulta()">
-                      <h5 class="card-title seccion-texto">Taller De Montaje</h5>
-                    </button>
-            <p class="card-text seccion-texto"><br>Otro de nuestros puntos importantes es que disponemos de un taller de montaje de gafas propio.Este completo taller de montaje con
-               que contamosnos permite montar cualquiera de los tipos de gafas disponibles actualmente en el mercado y no tener que enviar montajes a otros talleres, evitando así
-                el sobrecoste y la demora de tiempo que ello conlleva.</p>
           </div>
         </div>
       </div>
+      <!-- Tarjeta 2 -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="./assets/img/lentesrotos.jpg" alt="lentes rotos">
-          <div class="card-body">
+        <div class="card h-100">
+         <img class="card-img-top" src="./assets/img/taller.jpg" alt="Foto anteojos Recetados">
+          <div class="card-body d-flex flex-column">
             <div class="badges">
-              <span class="badge badge-warning">Seguro Rotura Lentes</span>
+              <span class="badge badge-warning"></span>
             </div>
-                                            <!-- (Event) Binding -->
-              <button class="btn btn-primary" (click)="redirigirAFormularioConsulta()">
-              <h5 class="card-title seccion-texto">Seguro Rotura Cristal</h5>
-              </button>
-            <p class="card-text seccion-texto"><br>Aunque las lentes que más se utilizan últimamente son las orgánicas (difíciles de romper), cuando te compres unas gafas graduadas en
-               TemiroOptica, además de la garantía propia que tendrán tus gafas, llevarás incluido un seguro de rotura para los cristales.  Este seguro de rotura es totalmente 
+            <h5 class="card-title seccion-texto"><b>TALLER DE MONTAJE</b></h5>
+            <p class="card-text seccion-texto">Otro de nuestros puntos importantes es que disponemos de un taller de montaje de gafas propio. Este completo taller de montaje nos permite montar cualquiera de los tipos de gafas disponibles actualmente en el mercado y no tener que enviar montajes a otros talleres, evitando así
+                el sobrecoste y la demora de tiempo que ello conlleva.</p>
+            <div class="mt-auto">
+              <button class="btn btn-primary w-100" (click)="redirigirAFormularioConsulta()"><b>CONSULTAR</b></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tarjeta 3 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="./assets/img/lentesrotos.jpg" alt="Lentes Rotos">
+          <div class="card-body d-flex flex-column">
+            <div class="badges">
+              <span class="badge badge-warning"></span>
+            </div>
+            <h5 class="card-title seccion-texto"><b>ROTURA DE CRISTAL</b></h5>
+            <p class="card-text seccion-texto">Aunque las lentes que más se utilizan últimamente son las orgánicas (difíciles de romper), cuando te compres unas gafas graduadas en
+               Temiro Óptica, además de la garantía propia que tendrán tus gafas, llevarás incluido un seguro de rotura para los cristales. Totalmente 
                gratuito y siempre está incluido en la compra de tus gafas graduadas.</p>
+            <div class="mt-auto">
+              <button class="btn btn-primary w-100" (click)="redirigirAFormularioConsulta()"><b>CONSULTAR</b></button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <br>
+  <br>
 </div>
