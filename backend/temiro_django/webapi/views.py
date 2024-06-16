@@ -10,6 +10,10 @@ from .serializers import ProductoSerializer
 from .models import *
 from .serializers import *
 
+from django.views import View
+from django.http import JsonResponse
+from .models import Home
+
 def index(request):
     return HttpResponse("Optica Temiro API endpoints")
 
@@ -341,3 +345,13 @@ class ServicioDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Servicio.objects.all()
     serializer_class = ServicioSerializer
 
+class HomeVisitCounterView(View):
+    def get(self, request):
+        home, created = Home.objects.get_or_create(id=1)  # Asumiendo que solo hay una instancia de Home
+        return JsonResponse({'visitas': home.visitas})
+
+    def post(self, request):
+        home, created = Home.objects.get_or_create(id=1)  # Asumiendo que solo hay una instancia de Home
+        home.visitas += 1
+        home.save()
+        return JsonResponse({'visitas': home.visitas})

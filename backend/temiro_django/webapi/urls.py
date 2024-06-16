@@ -1,9 +1,13 @@
 from django.urls import path, re_path
 from django.views.decorators.http import require_http_methods
 from .views import *
+from .views import HomeVisitCounterView
 
 urlpatterns = [
     path("", index, name="index"),
+    
+    path('visitas/', HomeVisitCounterView.as_view(), name='home-visitas'),
+    path('visitas/incrementar/', HomeVisitCounterView.as_view(), name='incrementar-visitas'),
 
     # ---- Urls referidas a la dirección postal
 

@@ -1,14 +1,4 @@
 import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class VisitasService {
-
-  constructor() { }
-}
-
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -17,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class VisitasService {
 
-  private apiUrl = 'http://tu-backend/api/contador-visitas'; // Reemplaza con tu URL del backend
+  private apiUrl = 'http://localhost:8000/webapi/visitas/'; // URL del endpoint en Django
 
   constructor(private http: HttpClient) { }
 
@@ -26,6 +16,7 @@ export class VisitasService {
   }
 
   incrementarContadorVisitas(): Observable<any> {
+    // Ajustar según cómo hayas implementado tu backend
     return this.http.post<any>(`${this.apiUrl}/incrementar`, {});
   }
 
